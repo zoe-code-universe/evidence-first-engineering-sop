@@ -1,6 +1,6 @@
 ---
 name: evidence-first-engineering-sop
-description: Evidence-first engineering workflow for debugging, fixing, deploying, and verifying software changes. Use when Codex handles technical issues, code changes, deployment tasks, regression checks, production incidents, GitHub project work, or the Ye Zhu project, especially when the user expects logs before conclusions, one-task-at-a-time execution, diff review, acceptance criteria, automated validation, and archive notes.
+description: Evidence-first engineering workflow for debugging, fixing, deploying, and verifying software changes. Use when Codex handles technical issues, code changes, deployment tasks, regression checks, production incidents, or GitHub project work, especially when the user expects logs before conclusions, one-task-at-a-time execution, diff review, acceptance criteria, automated validation, and archive notes.
 ---
 
 # Evidence-First Engineering SOP
@@ -103,17 +103,17 @@ After deploy:
 4. Update regression coverage or checklist.
 5. Archive the deployment note.
 
-## Ye Zhu Project Defaults
+## Product Project Defaults
 
-For the Ye Zhu project, apply this SOP automatically to:
+For product projects, apply this SOP automatically to:
 
-- phone login
-- module selection
-- questionnaire flow
-- generated preview
-- copy link and QR code sharing
-- Big B manual review flow
-- personal contact display
+- authentication and logout
+- onboarding or module selection
+- form and questionnaire flows
+- generated previews
+- sharing links and QR codes
+- manual review or approval flows
+- public contact display
 - publish, unpublish, and takedown behavior
 
 Early-stage integrations should remain mocked unless the user explicitly asks to connect a real provider and the acceptance criteria are clear.

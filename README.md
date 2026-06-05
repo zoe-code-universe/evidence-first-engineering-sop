@@ -1,6 +1,6 @@
 # Evidence-First Engineering SOP
 
-**A Codex skill that forces AI coding agents to debug like engineers: logs first, conclusions later.**
+**An open workflow that forces AI coding agents to debug like engineers: logs first, conclusions later.**
 
 Most AI coding mistakes do not come from lack of intelligence. They come from weak process:
 
@@ -10,7 +10,17 @@ Most AI coding mistakes do not come from lack of intelligence. They come from we
 - shipping fixes without regression checks
 - saying "done" without acceptance criteria
 
-This skill gives Codex a strict engineering workflow for debugging, fixing, deploying, and verifying software changes.
+This repository gives AI coding assistants a strict engineering workflow for debugging, fixing, deploying, and verifying software changes.
+
+It works as:
+
+- a Codex skill
+- a copy-paste prompt for any AI assistant
+- an `AGENTS.md` project instruction file
+- a Claude Code instruction file
+- a Gemini CLI instruction file
+- a Cursor rule
+- a GitHub Copilot custom instruction
 
 ## Who This Is For
 
@@ -49,7 +59,31 @@ The non-negotiables:
 12. Mock third-party services before integrating them.
 13. End long work with a clear daily note.
 
-## Install
+## Use With Any AI
+
+Copy the contents of [`PROMPT.md`](PROMPT.md) into ChatGPT, Claude, Gemini, Copilot Chat, Cursor, or any AI coding assistant before asking it to debug, fix, or deploy code.
+
+Shortest version:
+
+```text
+Use evidence-first engineering. Do not diagnose before checking logs, console output, network traces, diffs, returned data, and regression results. Work one issue at a time. After the fix, verify data shape, UI behavior, and a known-good regression path.
+```
+
+## Use In AI Coding Tools
+
+Different tools read different instruction files. This repo includes ready-to-copy versions:
+
+| Tool | File |
+| --- | --- |
+| Any AI chat | [`PROMPT.md`](PROMPT.md) |
+| Agentic coding projects | [`AGENTS.md`](AGENTS.md) |
+| Codex | [`SKILL.md`](SKILL.md) |
+| Claude Code | [`CLAUDE.md`](CLAUDE.md) |
+| Gemini CLI | [`GEMINI.md`](GEMINI.md) |
+| Cursor | [`.cursor/rules/evidence-first-engineering-sop.mdc`](.cursor/rules/evidence-first-engineering-sop.mdc) |
+| GitHub Copilot | [`.github/copilot-instructions.md`](.github/copilot-instructions.md) |
+
+## Install As A Codex Skill
 
 Clone this repository into your Codex skills folder:
 
@@ -73,6 +107,8 @@ Or:
 ```text
 Use $evidence-first-engineering-sop to ship this change with logs, diff review, acceptance criteria, regression checks, and archive notes.
 ```
+
+For other AI assistants, paste [`PROMPT.md`](PROMPT.md) or put the matching instruction file into your project.
 
 ## Example Prompts
 
@@ -104,7 +140,7 @@ This is a small skill, but it encodes a serious rule:
 
 ## 中文说明
 
-这是一个给 Codex / AI 编程助手使用的工程执行 SOP skill。
+这是一个给 AI 编程助手使用的开源工程执行 SOP。
 
 它的目标不是让 AI 写更多代码，而是让 AI 在写代码、修 bug、部署项目时更客观、更严谨。
 
@@ -118,7 +154,7 @@ This is a small skill, but it encodes a serious rule:
 - 用户反复提出的判断，必须重新用日志验证
 - 修完必须回归，最后必须归档
 
-如果你也希望 AI 编程助手少猜、多查、稳一点，可以安装这个 skill。
+如果你也希望 AI 编程助手少猜、多查、稳一点，可以直接复制 `PROMPT.md` 使用，也可以把 `AGENTS.md`、`CLAUDE.md`、`GEMINI.md`、Cursor rules 或 Copilot instructions 放进自己的项目。
 
 ## License
 

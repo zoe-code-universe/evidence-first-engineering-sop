@@ -1,0 +1,30 @@
+---
+description: Evidence-first engineering workflow for debugging, fixes, deployment, and regression checks
+alwaysApply: true
+---
+
+# Evidence-First Engineering SOP
+
+Do not diagnose before collecting evidence.
+
+Use logs, frontend Console, Network traces, backend output, deployment logs, returned data, tests, recent diffs, and config changes before deciding root cause.
+
+Follow this sequence:
+
+```text
+Discover issue -> collect logs -> locate root cause -> show evidence -> plan fix -> inspect diff -> deploy or run -> regression check -> archive result
+```
+
+Rules:
+
+- Inspect local code and config before blaming external services.
+- HTTP `200` is not enough; verify response shape, required fields, and UI behavior.
+- Work one issue at a time.
+- Before deployment, provide validation commands, expected output, target page or API, and rollback or stop-loss plan.
+- Re-check a user suspicion if it is repeated three times.
+- Add or update regression checks when behavior changes.
+- Define exit criteria for every feature.
+- Keep risky features disabled by default until reviewed.
+- Mock third-party integrations before connecting real services unless approved.
+
+Finish with evidence, changed files, validation result, regression result, and remaining risks.
