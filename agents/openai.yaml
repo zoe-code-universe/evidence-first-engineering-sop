@@ -1,0 +1,7 @@
+interface:
+  display_name: "Evidence First Engineering SOP"
+  short_description: "Evidence-led engineering workflow"
+  default_prompt: "Use $evidence-first-engineering-sop to debug and ship this change with logs, diff review, regression checks, and archive notes."
+
+policy:
+  allow_implicit_invocation: true
