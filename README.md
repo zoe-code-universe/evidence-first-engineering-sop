@@ -2,6 +2,8 @@
 
 **An open workflow that forces AI coding agents to debug like engineers: logs first, conclusions later.**
 
+**Evidence-First Engineering SOP 是一个开源 AI 编程工作流，让任何 AI 助手在修 bug、写代码、部署前，先拿证据、再下结论，减少瞎猜和返工。**
+
 Most AI coding mistakes do not come from lack of intelligence. They come from weak process:
 
 - guessing before reading logs
@@ -140,7 +142,7 @@ This is a small skill, but it encodes a serious rule:
 
 ## 中文说明
 
-这是一个给 AI 编程助手使用的开源工程执行 SOP。
+Evidence-First Engineering SOP 是一个开源 AI 编程工作流，让任何 AI 助手在修 bug、写代码、部署前，先拿证据、再下结论，减少瞎猜和返工。
 
 它的目标不是让 AI 写更多代码，而是让 AI 在写代码、修 bug、部署项目时更客观、更严谨。
 
