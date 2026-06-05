@@ -48,7 +48,7 @@ Default to this sequence:
 
 9. Define exit criteria for every feature.
    - Replace vague tasks such as "make login" with concrete completion rules.
-   - Example: phone login is complete when login, logout, error states, refresh persistence, and required audit fields are verified.
+   - Example: authentication is complete when login, logout, error states, refresh persistence, and required audit fields are verified.
 
 10. Keep risk features off by default.
     - Treat public feeds, marketplaces, brand pages, real-name verification, high-risk industries, external domain binding, payments, and deep social sharing as gated features until reviewed.
